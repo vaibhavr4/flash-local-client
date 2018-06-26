@@ -1,94 +1,97 @@
- <div class="container">
-   <div class="card ">
-     <div class="card-header">
-       <h2> Profile </h2>
-     <div style="text-align: right">
-       <a class="danger" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
-     </div>
-     </div>
-     <div class="card-body">
-    <div class="row">
-      <div class="col-md-10">
-        <div></div>
+<div class="container">
+  <div class="card ">
+    <div class="card-header">
+      <h2> Profile </h2>
+      <div style="text-align: right">
+        <a class="danger" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-10">
+          <div></div>
 
+          <form #form="ngForm" novalidate>
+            <div>
+              <label for="username" class="fields">Username</label>
+              <input [(ngModel)]="username" placeholder="Username" id="name" name="name" #name="ngModel" class="form-control form-control-lg"
+                     #input required/>
+            </div>
+            <div *ngIf="name.invalid" class="alert alert-danger">
 
-        <div>
-          <label for="username" class="fields">Username</label>
-          <input [(ngModel)]="username" placeholder="Username" id="name" name="name" #name="ngModel" class="form-control form-control-lg"
-                 required/>
-        </div>
-        <div *ngIf="name.invalid" class="alert alert-danger">
+              <div *ngIf="name.errors.required">
+                Username is required.
+              </div>
 
-          <div *ngIf="name.errors.required">
-            Username is required.
-          </div>
-
-        </div>
-
-        <div>
-          <label for="password" class="fields">Password</label>
-          <input [(ngModel)]="password" placeholder="Password" id="password" name="password" #name="ngModel" class="form-control form-control-lg"
-                 required/>
-        </div>
-        <div *ngIf="password.invalid" class="alert alert-danger">
-
-          <div *ngIf="password.errors.required">
-            Username is required.
-          </div>
-
-        </div>
-
-
-        <div>
-          <label for="firstName" class="fields">Firstname</label>
-          <input [(ngModel)]="firstName" placeholder="First Name" id="fname" name="fname" #fname="ngModel" required class="form-control form-control-lg" />
-        </div>
-        <div *ngIf="fname.invalid" class="alert alert-danger">
-          <div *ngIf="fname.errors.required">
-            Firstname is required.
-          </div>
-
-        </div>
-        <div>
-          <label for="lastName" class="fields">LastName</label>
-          <input [(ngModel)]="lastName" placeholder="Last Name" id="lname" name="lname" #lname="ngModel" required class="form-control form-control-lg" />
-          <div *ngIf="lname.invalid" class="alert alert-danger">
-            <div *ngIf="lname.errors.required">
-              Lastname is required.
             </div>
 
-          </div>
-        </div>
-        <div>
-          <label for="email" class="fields">Email</label>
-          <input [(ngModel)]="email" placeholder="email@abc.com" id="emails" name="emails" #emails="ngModel" required class="form-control form-control-lg" />
+            <div>
+              <label for="password" class="fields">Password</label>
+              <input [(ngModel)]="password" placeholder="Password" id="password" name="password" #name="ngModel" class="form-control form-control-lg"
+                     #input required/>
+            </div>
+            <div *ngIf="password.invalid" class="alert alert-danger">
 
-        </div>
-        <div *ngIf="emails.invalid" class="alert alert-danger">
-          <div *ngIf="emails.errors.required">
-            Email is required.
-          </div>
+              <div *ngIf="password.errors.required">
+                Password is required.
+              </div>
 
-        </div>
+            </div>
 
-        <p></p>
-        <div>
-          <button (click)="update()" class="btn btn-lg btn-primary btn-block">
-            <i class="fa fa-check wbdv-update"></i>&nbsp;Update
-          </button>
+
+
+
+            <div>
+              <label for="firstName" class="fields">Firstname</label>
+              <input [(ngModel)]="firstName" placeholder="First Name" id="fname" name="fname" #fname="ngModel" class="form-control form-control-lg" #input required/>
+            </div>
+            <div *ngIf="fname.invalid" class="alert alert-danger">
+              <div *ngIf="fname.errors.required">
+                Firstname is required.
+              </div>
+
+            </div>
+            <div>
+              <label for="lastName" class="fields">LastName</label>
+              <input [(ngModel)]="lastName" placeholder="Last Name" id="lname" name="lname" #lname="ngModel" class="form-control form-control-lg" #input required/>
+              <div *ngIf="lname.invalid" class="alert alert-danger">
+                <div *ngIf="lname.errors.required">
+                  Lastname is required.
+                </div>
+
+              </div>
+            </div>
+            <div>
+              <label for="email" class="fields">Email</label>
+              <input [(ngModel)]="email" placeholder="email@abc.com" id="emails" name="emails" #emails="ngModel" class="form-control form-control-lg" #input required/>
+
+            </div>
+            <div *ngIf="emails.invalid" class="alert alert-danger">
+              <div *ngIf="emails.errors.required">
+                Email is required.
+              </div>
+
+            </div>
+
+            <p></p>
+            <div>
+              <button (click)="update()" class="btn btn-lg btn-primary btn-block" [disabled]="!form.valid">
+                <i class="fa fa-check wbdv-update"></i>&nbsp;Update
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-<p>
+    <p>
 
-  <!--{{ads[0].title}}-->
-</p>
-
+      <!--{{ads[0].title}}-->
+    </p>
 
 
-<br>
-<div style="text-align: center">
-  <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
-</div>
-   </div></div>
+
+    <br>
+    <div style="text-align: center">
+      <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
+    </div>
+  </div></div>
