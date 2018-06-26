@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="card text-center">
+      <div class="card-header">
+  <h1>Register</h1>
+      </div>
+      <div class="card-body">
+  <input [(ngModel)]="username"
+         placeholder="username"
+         class="form-control form-control-lg"/>
+  <input [(ngModel)]="password"
+         placeholder="password" type="password"
+         class="form-control form-control-lg"/>
+  <input [(ngModel)]="password2"
+         placeholder="verify password" type="password"
+         class="form-control form-control-lg"/> <br>
+  <button (click)="register(username, password, password2)"
+          class="btn btn-primary btn-block btn-lg">
+    Register
+  </button>
+<br>
+  <a routerLink="/login" class="btn btn-lg btn-dark margin"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</a> &nbsp;
+  <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
+
+</div>
+    </div>
+  </div></div>

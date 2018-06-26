@@ -1,0 +1,34 @@
+<h1>
+  <!-- here we echo the title from the component -->
+  {{title}}
+</h1>
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Please select images individually and click Upload..</h5>
+    <div class="card-body">
+<!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+  <div class="cont">
+    <div class="fixed">
+      <label class="myFile">
+        <img src="https://www.pngarts.com/files/2/Upload-PNG-Pic.png" width="65" height="65" alt=""/> &nbsp; &nbsp; &nbsp;
+        <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+      </label>
+    </div>
+    <!-- button to trigger the file upload when submitted -->
+    <div class="flex-item">
+      <button type="button" class="btn btn-success btn-lg round" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+        Upload Image
+      </button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+<!--&lt;!&ndash; File input for upload without using the plugin. &ndash;&gt;-->
+<!--<input id="photo" type="file" />-->
+<!--&lt;!&ndash; button to trigger the file upload when submitted &ndash;&gt;-->
+<!--<button type="button" class="btn btn-success btn-s" (click)="upload()">-->
+  <!--Upload with method 2-->
+<!--</button>-->
+</div>

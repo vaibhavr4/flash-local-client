@@ -1,0 +1,140 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    .zoom {
+
+      background-color: white;
+      transition: transform .2s;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    .zoom:hover {
+      -ms-transform: scale(3); /* IE 9 */
+      -webkit-transform: scale(3); /* Safari 3-8 */
+      transform: scale(3);
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top background-opacity">
+  <div class="container-fluid topnavbar visible-sm visible-md visible-lg">
+
+    <a routerLink="/user-admin" class="navbar-brand navbarheading">
+      ADMIN CONTROLLER
+    </a>
+
+    <a (click)="logout()" class="navbar-brand navbarheading">
+      LOGOUT
+    </a>
+  </div>
+</nav>
+
+
+<div class="card">
+  <div class="container-fluid">
+
+    <div class="card-header">
+      <h2 align="center">
+        {{ myAd.title }}
+      </h2>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card-body">
+          <div class="row">
+            <div *ngFor="let test of images">
+              <div class="zoom">
+                <img class=" advertise-poster img-responsive" [src]="test" height="110" width="110"/>
+              </div>
+
+            </div>
+          </div>
+          <br>
+          <h4><strong>DESCRIPTION</strong></h4>
+          <p class="description">{{ myAd.description }}</p>
+
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-header">
+            <h4><strong>SELLER DETAILS</strong></h4>
+          </div>
+          <div class="card-body">
+            <p class="description">{{ myAd.username }}</p>
+            <p class="description">{{ myAd.email }}</p>
+            <p class="description">{{ myAd.phone }}</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="card-body">
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3><span>Flash</span></h3>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        ·
+        <a routerLink="/login">Login</a>
+        ·
+        <a routerLink="/register">Register</a>
+        ·
+        <a href="#">Search</a>
+      </p>
+
+      <p class="footer-company-name">FLASH &copy; 2018</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>1191 Boylston Street</span> Boston, MA</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 857 413-8932</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:rangarajan.v@husky.neu.edu">US</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the marketplace</span>
+        Buy and sell in a flash.
+      </p>
+
+
+
+    </div>
+
+  </footer>
+
+</div>
+</body>
+</html>
+
+
+
+
+

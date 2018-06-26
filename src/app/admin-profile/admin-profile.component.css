@@ -1,0 +1,44 @@
+a.primary{
+  border: 2px solid #000000;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a.primary:hover, a.primary:active {
+  background-color: #A2D7B5;
+}
+
+
+
+a.danger{
+  border: 2px solid #000000;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a.danger:hover, a.danger:active {
+  background-color: #EE7F7F;
+}
+
+a.secondary{
+  border: 2px solid #000000;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a.secondary:hover, a.secondary:active {
+  background-color: #D7CA84;
+}
+

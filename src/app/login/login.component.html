@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="card text-center">
+      <div class="card-header">
+  <h2>Login</h2>  &nbsp; &nbsp;
+  <span>{{message}}</span>  &nbsp; &nbsp;
+      </div>
+      <div class="card-body">
+  <input [(ngModel)]="username"
+         placeholder="username"
+         class="form-control form-control-lg"/>
+  <input [(ngModel)]="password"
+         placeholder="password" type="password"
+         class="form-control form-control-lg"/> <br>
+  <button (click)="login(username, password)"
+          class="btn btn-primary btn-block btn-lg">
+    Login
+  </button>
+<br>
+
+  <a routerLink="/register" class="btn btn-lg btn-dark margin"><i class="fa fa-user-plus"></i>&nbsp;Register</a> &nbsp;
+  <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
+        <a (click)="signinWithGoogle()" style="color: white" class="btn btn-lg btn-dark margin"><i class="fab fa-google-plus-g"></i>&nbsp;Sign in with Google</a>
+</div>
+    </div>
+</div>

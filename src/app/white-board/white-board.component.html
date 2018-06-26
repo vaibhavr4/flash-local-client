@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="header">
+  <h1 style="font-family: 'Trebuchet MS';color:#fcdb49;" align="center">
+    <img src="https://vignette.wikia.nocookie.net/crossgencomicsdatabase/images/d/df/Flash_Logo_01.png/revision/20141031071501" width="80" height="80"/>
+    Flash Marketplace
+  </h1>
+  <h4 style="color:  #F3D8BD" align="center">
+        &nbsp; &nbsp; - Buy,Sell in a Flash
+  </h4>
+  </div>
+  <div class="topnav" *ngIf="!logged">
+  <a routerLink="/login">Login</a>
+  <a routerLink="/register">Register</a>
+  <a routerLink="/home">Search</a>
+    <a routerLink="/login">Post Ad</a>
+  </div>
+
+  <div class="topnav" *ngIf="logged">
+    <a routerLink="/profile">Profile</a>
+    <a routerLink="/post-ad">Post Ad</a>
+    <a class="active" routerLink="/home">Search</a>
+    <a routerLink="/my-ads">My Ads</a>
+    <span style="float:right">
+      <a (click)="logout()">Logout</a>
+    </span>
+    </div>
+
+<app-search-list></app-search-list>
+</div>

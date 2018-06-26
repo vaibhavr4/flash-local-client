@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+    <h2 class="card-header">Ads posted by me</h2>
+    <div class="card-body">
+  <div class="row">
+  <div *ngFor="let posted of ads" class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{posted.title}}</h5>
+        <img src="http://localhost:4000/{{posted.image[0]}}" width="100" height="80"/>
+<br><br>
+
+        <button (click)="deleteAd(posted._id)"
+                class="btn btn-danger">Delete Ad</button> &nbsp;
+
+        <button routerLink="/my-ad/{{posted._id}}" class="btn btn-dark">View Ad</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div style="text-align: center">
+  <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
+</div>
+</div>
+  </div>
+</div>

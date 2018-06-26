@@ -1,0 +1,32 @@
+.myFile {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.myFile input[type="file"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 100px;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+.btn-lg.round {
+  border-radius: 24px;
+}
+
+
+.cont{
+  display:flex;
+}
+.fixed{
+    width: 200px;
+}
+.flex-item{
+
+  flex-grow: 1;
+}

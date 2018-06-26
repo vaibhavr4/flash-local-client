@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>Admin Control Page</h2>
+      <div style="text-align: right">
+      <a class="danger" (click)="logout()">&nbsp;Logout</a>
+      </div>
+    </div>
+<div class="row">
+  <div class="col-4">
+    <ul class="list-group">
+      <li class="list-group-item active">Users</li>
+
+      <li  *ngFor="let user of usermodified"
+           [ngClass]="{'active': user._id == userId}"
+           class="list-group-item wbdv">
+        <a routerLink="/user/{{user._id}}/content">
+          {{user.username}}
+        </a>
+        <span class="float-right">
+          <button class="danger" (click)="deleteUser(user._id)" >DELETE</button></span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-8">
+<app-admin-ad-control></app-admin-ad-control>
+  </div>
+
+
+</div>
+</div>
+</div>

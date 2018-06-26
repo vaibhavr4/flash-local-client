@@ -1,0 +1,10 @@
+<div class="container-fluid">
+<button (click)="signinWithGoogle()">Sign in with Google</button>
+</div>
+<img src="{{ user.photoUrl }}">
+<div>
+  <h4>{{ user.name }}</h4>
+  <p>{{ user.email }}</p>
+</div>
+
+<button (click)="signOut()  ">Sign out</button>

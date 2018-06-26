@@ -1,0 +1,39 @@
+.myFile {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.myFile input[type="file"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 100px;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+.btn-lg.round {
+  border-radius: 24px;
+}
+
+a.danger{
+  border: 2px solid #000000;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a.danger:hover, a.danger:active {
+  background-color: #EE7F7F;
+}
+
+.warningText{
+  color: red;
+  margin-bottom: 5px;
+}

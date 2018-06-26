@@ -1,0 +1,283 @@
+
+<div class="container-fluid">
+  <br>
+  <h3>Search in Boston</h3>
+
+  <div class="input-group">
+    <input [(ngModel)]="search"
+           placeholder="Search item.."
+           class="form-control form-control-lg">
+    <br>
+
+    <div class="input-group-append">
+  <button (click)="searchCraigs(search,category)" class="btn-dark btn-lg">
+    <i class="fas fa-search"></i>
+  </button>
+  </div>
+  </div>
+  <br>
+  <h4 align="center">CATEGORY</h4>
+  <div class="row">
+    <div class="col-sm-3">
+  <div class="card">
+<div class="card-header">
+    <button (click)="searchCraigs('','hhh')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+      <i class="fas fa-home"></i> HOUSING </button>
+</div>
+    <div class="card-body">
+      <div class="row">
+        <figure>
+      <img src="https://maxcdn.icons8.com/app/uploads/2016/09/sweet-home-icon.jpg" width="70" height="50" (click)="searchCraigs('studio','hhh')" />
+          <figcaption>Studio</figcaption>
+        </figure>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <figure>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxNatSfhyZszK5GDkWX6Q8iP58KrNKuEzVta1zxJYOXuOk7Zlr" width="50" height="50" (click)="searchCraigs('apartment','hhh')" />
+          <figcaption>Apartment</figcaption>
+        </figure>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <figure>
+      <img src="http://www.thebestvacationhomes.com/images/logo.png" width="50" height="50" (click)="searchCraigs('vacation rentals','hhh')" />
+          <figcaption>Vacation</figcaption>
+        </figure>
+      </div>
+      <br>
+      <div class="row">
+        <figure>
+      <img src="https://images.vexels.com/media/users/3/127081/isolated/preview/cd0b81a1b9e0bbca6951210691403ebe-arrow-houses-real-estate-icon-by-vexels.png" width="50" height="50" (click)="searchCraigs('real estate','hhh')" />
+          <figcaption>Real Estate</figcaption>
+        </figure>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <figure>
+      <img src="https://images.clipartuse.com/3f0318f4e11387a5ac402cd099660d6e_office-clipart-png-clipartxtras_591-301.png" width="70" height="50" (click)="searchCraigs('office','hhh')" />
+          <figcaption>Office/Commercial</figcaption>
+        </figure>
+      </div>
+    </div></div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <button (click)="searchCraigs('','ccc')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+          <i class="fa fa-globe"></i> COMMUNITY</button>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <figure>
+          <img src="https://openclipart.org/image/2400px/svg_to_png/270507/1484159149.png" width="50" height="50"  (click)="searchCraigs('activity partners','ccc')"/>
+              <figcaption>Activity</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="http://www.northstarmoving.com/wp-content/uploads/pet-care-icon.png" width="50" height="50" (click)="searchCraigs('pets','ccc')" />
+              <figcaption>Pets</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+            <figure>
+          <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/332981-200.png" width="50" height="50" (click)="searchCraigs('childcare','ccc')" />
+              <figcaption>Child Care</figcaption>
+            </figure>
+          </div>
+          <br>
+          <div class="row">
+            <figure>
+          <img src="https://www.insead.edu/sites/default/files/assets/dept/events/images/Icon_community.png" width="60" height="50" (click)="searchCraigs('events','ccc')" />
+              <figcaption>Events</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+            <figure>
+          <img src="https://fermentationwineblog.com/wp-content/uploads/resistance-1.png" width="50" height="50" (click)="searchCraigs('politics','ccc')" />
+              <figcaption>Politics</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+<div class="card-header">
+          <button (click)="searchCraigs('','jjj')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+            <i class="fa fa-briefcase"></i> JOBS</button>
+</div>
+        <div class="card-body">
+          <div class="row">
+            <figure>
+          <img src="http://inmagnat.com/account/190/fl50152e6a53ac0.png" width="60" height="50" (click)="searchCraigs('education','jjj')"/>
+              <figcaption>Education</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <figure>
+          <img src="http://www.pngmart.com/files/3/Software-PNG-Photos.png" width="50" height="50" (click)="searchCraigs('software','jjj')" />
+              <figcaption>Software</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <figure>
+          <img src="http://files.softicons.com/download/toolbar-icons/vista-people-icons-by-icons-land/png/256x256/Medical/Nurse_Male_Dark.png" width="50" height="50" (click)="searchCraigs('healthcare','jjj')" />
+              <figcaption>Medical</figcaption>
+            </figure>
+          </div>
+          <br>
+          <div class="row">
+            <figure>
+          <img src="http://www.freepngimg.com/download/business/5-2-business-picture.png" width="50" height="50" (click)="searchCraigs('business','jjj')" />
+              <figcaption>Business</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <figure>
+          <img src="https://cdn.icon-icons.com/icons2/1153/PNG/512/1486564172-finance-loan-money_81492.png" width="50" height="50" (click)="searchCraigs('finance','jjj')" />
+              <figcaption>Accounting</figcaption>
+            </figure>
+          </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          <button (click)="searchCraigs('','bbb')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+            <i class="fa fa-wrench"></i> SERVICES</button>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <figure>
+          <img src="http://www.pngmart.com/files/7/Labour-PNG-Picture.png" width="50" height="50" (click)="searchCraigs('labor hauling moving','bbb')"/>
+              <figcaption>Labor/Move</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="https://cdn4.iconfinder.com/data/icons/construction-and-household-services/227/Plumber_11-512.png" width="50" height="50" (click)="searchCraigs('household services','bbb')" />
+              <figcaption>Household</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="https://cdn4.iconfinder.com/data/icons/motorcycle-4/32/wash-motorcycle-bike-clean-service-512.png" width="50" height="50" (click)="searchCraigs('cycle services','bbb')" />
+              <figcaption>Cycle Repair</figcaption>
+            </figure>
+          </div>
+          <br>
+          <div class="row">
+            <figure>
+          <img src="https://whyboba.com/wp-content/uploads/2015/10/scales.png" width="50" height="50" (click)="searchCraigs('legal services','bbb')" />
+              <figcaption>Legal</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="http://greengardenservices1946.com/img/man.png" width="50" height="50" (click)="searchCraigs('farm garden services','bbb')"/>
+              <figcaption>Farm + Garden</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+     <div class="card-header">
+          <button (click)="searchCraigs('','sss')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+            <i class="fa fa-cubes"></i> FOR SALE</button>
+     </div>
+        <div class="card-body">
+          <div class="row">
+            <figure>
+          <img src="https://previews.123rf.com/images/larryrains/larryrains1605/larryrains160500750/57291686-clothes-dryer-mascot.jpg" width="60" height="60" (click)="searchCraigs('appliances','sss')"/>
+              <figcaption>Appliances</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tShj_iuuaVo2Yvsllzu1jXV5GKmj9eGE3I19Wz7pN_at99LUqA" width="60" height="60" (click)="searchCraigs('musical instruments','sss')" />
+              <figcaption>Music Instruments</figcaption>
+            </figure>
+          </div>
+          <br>
+          <div class="row">
+            <figure>
+          <img src="https://png.pngtree.com/element_origin_min_pic/17/01/06/a53d9c7037e7fa656977c4bd547a8c91.jpg" width="40" height="40" (click)="searchCraigs('computers','sss')" >
+              <figcaption>Laptops</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="http://images.clipartpanda.com/furniture-clipart-furniture-md.png" width="40" height="40" (click)="searchCraigs('furniture','sss')" />
+              <figcaption>Furniture</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="http://www.pngmart.com/files/6/Bicycle-PNG-Transparent-Picture-420x247.png" width="70" height="40" (click)="searchCraigs('bicycles','sss')" />
+              <figcaption>Bikes</figcaption>
+            </figure>
+          </div>
+    </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <div class="card">
+<div class="card-header">
+          <button (click)="searchCraigs('','ggg')" class="btn btn-lg btn-dark margin" style="display: block; margin: 0 auto;">
+            <i class="fa fa-beer"></i> GIGS</button>
+      </div>
+        <div class="card-body">
+          <div class="row">
+          <figure>
+          <img src="http://www.iconsplace.com/download/orange-computer-512.gif" width="40" height="40" (click)="searchCraigs('computer gigs','ggg')"/>
+            <figcaption>Computer</figcaption>
+          </figure>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <figure>
+          <img src="data:image/png;base64,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" width="40" height="40" (click)="searchCraigs('creative gigs','ggg')" />
+            <figcaption>Creative</figcaption>
+          </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <figure>
+          <img src="https://png.pngtree.com/element_origin_min_pic/16/09/30/1257ede84bdf65e.jpg" width="40" height="40" (click)="searchCraigs('crew gigs','ggg')" />
+            <figcaption>Crew</figcaption>
+          </figure>
+          </div>
+            <br>
+          <div class="row">
+            <figure>
+          <img src="http://www.maylocnuoc24.vn/upimages/products/sua-chua-dien-ha-noi.jpg" width="60" hright="60" (click)="searchCraigs('domestic gigs','ggg')" />
+              <figcaption> Domestic</figcaption>
+            </figure>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <figure>
+          <img src="http://www.techonz.com/wp-content/uploads/writing.png" width="60" height="60" (click)="searchCraigs('writing gigs','ggg')" >
+              <figcaption> Writing</figcaption>
+            </figure>
+          </div>
+       <br>
+      </div>
+    </div>
+  </div>
+  </div>
+<br><br>
+<div class="card">
+
+<div class="card-header">
+  <h3>Ad Search Results</h3>
+</div>
+  <p [innerHTML]="sample"></p>
+
+  <ul class="list-group">
+
+    <li *ngFor="let s of searchList"
+        class="list-group-item">
+      <img src="{{s.image}}" width="150px height=150px"> &nbsp; &nbsp;&nbsp; &nbsp;
+
+    <a  style="font-family: Trebuchet MS" (click)="scrape_details(s.about)" > {{s.title}} </a>
+    </li>
+    <li *ngFor="let se of localsearchList"
+        class="list-group-item">
+      <img src="http://localhost:4000{{se.image[0]}}" width="150px height=150px"> &nbsp; &nbsp;&nbsp; &nbsp;
+
+      <a style="font-family: Trebuchet MS" routerLink="/my-ad/{{se._id}}" [innerHTML]="se.title"> </a>
+    </li>
+  </ul>
+</div>
+</div>
