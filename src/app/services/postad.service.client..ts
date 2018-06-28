@@ -10,6 +10,17 @@ export class PostAdServiceClient {
     });
   }
 
+  updateAd(updatead) {
+    return fetch('http://localhost:4000/api/update-ad', {
+      method: "PUT",
+      body: JSON.stringify(updatead),
+      credentials: 'include', // include, same-origin, *omit
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+  }
+
   scrape_details(about)
   {
     const req={about};

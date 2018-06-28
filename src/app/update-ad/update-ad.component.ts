@@ -3,29 +3,29 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {PostAdServiceClient} from "../services/postad.service.client.";
 import {  FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { Http, Response } from '@angular/http';
-import "rxjs/add/operator/do";
-import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-//import the map function to be used with the http library
-import "rxjs/add/operator/map";
+import "rxjs/add/operator/do";import "rxjs/add/operator/map";
 import {UserServiceClient} from "../services/user.service.client";
+
 const URL = 'http://localhost:4000/api/upload';
 
-@Component({
-  selector: 'app-post-ad',
-  templateUrl: './post-ad.component.html',
-  styleUrls: ['./post-ad.component.css']
-})
-export class PostAdComponent implements OnInit {
 
+@Component({
+  selector: 'app-update-ad',
+  templateUrl: './update-ad.component.html',
+  styleUrls: ['./update-ad.component.css']
+})
+export class UpdateAdComponent implements OnInit {
   public uploader:FileUploader = new FileUploader({url: URL, itemAlias: 'photo'});
   constructor(private service: PostAdServiceClient,
               private userservice: UserServiceClient,
               private router: Router,
               private route: ActivatedRoute,
-              private http: Http, private el: ElementRef) { }
-
+              private http: Http, private el: ElementRef) {
+    this.route.params.subscribe(params => this._id=(params['adId']));
+  }
 
   title;
+  _id;
   ad;
   username;
   phone;
@@ -57,10 +57,10 @@ export class PostAdComponent implements OnInit {
 
   setPrice()
   {
-      if(this.categoryVal=="Housing" || this.categoryVal=="Sale")
-        this.isPrice=true;
-      else
-        this.isPrice=false;
+    if(this.categoryVal=="Housing" || this.categoryVal=="Sale")
+      this.isPrice=true;
+    else
+      this.isPrice=false;
   }
 
   setParams()
@@ -74,12 +74,23 @@ export class PostAdComponent implements OnInit {
       this.category = this.powers[index].key;
       return true;
     }
-
   }
-  postad()
+
+  setAd(getad)
+  {
+    this.title=getad.title;
+    console.log("title update:"+this.title);
+    this.description = getad.description;
+    this.username=getad.username;
+    this.phone=getad.phone;
+    this.email=getad.email;
+  }
+
+  updatead()
   {
     if(this.setParams()) {
       this.ad = {
+        _id:this._id,
         title: this.title,
         category: this.category,
         description: this.description,
@@ -93,7 +104,7 @@ export class PostAdComponent implements OnInit {
       console.log("IMAGE:" + this.image);
 
       this.service
-        .createAd(this.ad)
+        .updateAd(this.ad)
         .then(() =>
           this.router.navigate(['home']));
     }
@@ -108,6 +119,9 @@ export class PostAdComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.service
+      .getAd(this._id)
+      .then((ad)=>this.setAd(ad));
     this.uploader.onAfterAddingFile = (file)=> { file.withCredentials = false; };
     this.uploader.onCompleteItem = (item:any, response:any, status:any, headers:any) => {
       console.log("ImageUpload:uploaded:", item, status, response);
@@ -115,6 +129,7 @@ export class PostAdComponent implements OnInit {
       this.temp=this.temp.substr(6);
       this.image.push(this.temp);
       console.log("IMAGE LINK:" + this.image);
+
     };
   }
 

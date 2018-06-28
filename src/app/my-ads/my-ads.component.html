@@ -12,7 +12,8 @@
 
         <button (click)="deleteAd(posted._id)"
                 class="btn btn-danger">Delete Ad</button> &nbsp;
-
+<br><br>
+        <button routerLink="/update-ad/{{posted._id}}" class="btn btn-primary">Update Ad</button>
         <button routerLink="/my-ad/{{posted._id}}" class="btn btn-dark">View Ad</button>
 
       </div>

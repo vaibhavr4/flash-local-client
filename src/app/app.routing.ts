@@ -14,6 +14,7 @@ import {AdminProfileComponent} from "./admin-profile/admin-profile.component";
 import {ViewMyadComponent} from "./view-myad/view-myad.component";
 import {MyAdsAdminComponent} from "./my-ads-admin/my-ads-admin.component";
 import {AdminRegisterComponent} from "./admin-register/admin-register.component";
+import {UpdateAdComponent} from "./update-ad/update-ad.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'profile/:userId', component: ProfileComponent},
   {path: 'result', component: ResultSectionComponent},
   { path: 'post-ad', component: PostAdComponent},
+  { path: 'update-ad/:adId', component: UpdateAdComponent },
   { path: 'api/upload', component: FileUploadTestComponent},
   { path:'ad-details', component: AdDetailsComponent},
   { path:'my-ads',component: MyAdsComponent },

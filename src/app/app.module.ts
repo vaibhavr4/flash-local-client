@@ -31,6 +31,7 @@ import { MyAdsAdminComponent } from './my-ads-admin/my-ads-admin.component';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular4-social-login";
 import { getAuthServiceConfigs } from "../socialloginConfig";
 import {AdminRegisterComponent} from "./admin-register/admin-register.component";
+import { UpdateAdComponent } from './update-ad/update-ad.component';
 
 
 let config = new AuthServiceConfig([{
@@ -62,7 +63,8 @@ export function provideConfig() {
     AdminProfileComponent,
     ViewMyadComponent,
     AdminRegisterComponent,
-    MyAdsAdminComponent
+    MyAdsAdminComponent,
+    UpdateAdComponent
   ],
   imports: [
     BrowserModule,
