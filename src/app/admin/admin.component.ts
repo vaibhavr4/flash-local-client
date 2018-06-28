@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {SectionServiceClient} from "../services/section.service.client";
 import {Section} from "../models/section.model.client";
 import {UserServiceClient} from "../services/user.service.client";
+import {PostAdServiceClient} from "../services/postad.service.client.";
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,7 @@ import {UserServiceClient} from "../services/user.service.client";
 export class AdminComponent implements OnInit {
 
   constructor(private userservice: UserServiceClient,
+              private service: PostAdServiceClient,
               private router: Router,
               private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.userId=params['userId']);

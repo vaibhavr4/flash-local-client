@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   }
 
   _id;
+  admin_user=false;
   user ;
   username;
   firstName;
@@ -83,9 +84,19 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
 
-    this.service
-      .profile()
-      .then(user => this.setUser(user));
+    console.log("PROFILE ID:"+this._id);
+
+    if(this._id===undefined) {
+      this.service
+        .profile()
+        .then(user => this.setUser(user));
+    }
+    else {
+      this.service
+        .findUserById(this._id)
+        .then(user=> this.setUser(user));
+      this.admin_user = true;
+    }
 
     // this.adService.findAdsForUser()
     //   .then(ads=>this.ads=ads);

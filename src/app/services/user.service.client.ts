@@ -14,8 +14,8 @@ export class UserServiceClient {
 
   login(username, password) {
     const credentials = {
-      username: username,
-      password: password
+      password: password,
+      username: username
     };
     return fetch('http://localhost:4000/api/login', {
       method: 'post',

@@ -88,7 +88,10 @@
 
 
 <br>
-<div style="text-align: center">
+<div *ngIf="!admin_user" style="text-align: center">
   <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
 </div>
+     <div *ngIf="admin_user" style="text-align: center">
+       <a class="btn btn-lg btn-dark margin" routerLink="/user-admin"><i class="fas fa-home"></i>&nbsp;Home</a>
+     </div>
    </div></div>

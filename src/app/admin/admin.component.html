@@ -18,7 +18,8 @@
           {{user.username}}
         </a>
         <span class="float-right">
-          <button class="danger" (click)="deleteUser(user._id)" >DELETE</button></span>
+          <button class="danger" (click)="deleteUser(user._id)" >DELETE</button>
+        <a class="danger" routerLink="/profile/{{user._id}}" >UPDATE</a></span>
       </li>
     </ul>
   </div>
