@@ -63,7 +63,7 @@ export class AdminProfileComponent implements OnInit {
 
   ngOnInit() {
     this.service
-      .profile()
+      .findUserByName("admin")
       .then(user => this.setUser(user));
   }
 

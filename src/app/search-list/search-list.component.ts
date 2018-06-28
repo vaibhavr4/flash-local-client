@@ -20,6 +20,7 @@ export class SearchListComponent implements OnInit {
   test;
   about: String;
   ad;
+sample="&#x0024;1948";
 
   scrape_details(about)
   {
