@@ -24,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'profile/:userId', component: ProfileComponent},
+  { path: 'profile/:userId', component: ProfileComponent},
   {path: 'result', component: ResultSectionComponent},
   { path: 'post-ad', component: PostAdComponent},
   { path: 'api/upload', component: FileUploadTestComponent},
