@@ -11,11 +11,11 @@
       <div class="col-md-10">
         <div></div>
 
-
+<form #form="ngForm" novalidate>
         <div>
           <label for="username" class="fields">Username</label>
           <input [(ngModel)]="username" placeholder="Username" id="name" name="name" #name="ngModel" class="form-control form-control-lg"
-                 required/>
+                 #input required/>
         </div>
         <div *ngIf="name.invalid" class="alert alert-danger">
 
@@ -28,7 +28,7 @@
         <div>
           <label for="password" class="fields">Password</label>
           <input [(ngModel)]="password" placeholder="Password" id="password" name="password" #name="ngModel" class="form-control form-control-lg"
-                 required/>
+                 #input required/>
         </div>
         <div *ngIf="password.invalid" class="alert alert-danger">
 
@@ -41,7 +41,7 @@
 
         <div>
           <label for="firstName" class="fields">Firstname</label>
-          <input [(ngModel)]="firstName" placeholder="First Name" id="fname" name="fname" #fname="ngModel" required class="form-control form-control-lg" />
+          <input [(ngModel)]="firstName" placeholder="First Name" id="fname" name="fname" #fname="ngModel" class="form-control form-control-lg" #input required/>
         </div>
         <div *ngIf="fname.invalid" class="alert alert-danger">
           <div *ngIf="fname.errors.required">
@@ -51,7 +51,7 @@
         </div>
         <div>
           <label for="lastName" class="fields">LastName</label>
-          <input [(ngModel)]="lastName" placeholder="Last Name" id="lname" name="lname" #lname="ngModel" required class="form-control form-control-lg" />
+          <input [(ngModel)]="lastName" placeholder="Last Name" id="lname" name="lname" #lname="ngModel" class="form-control form-control-lg" #input required />
           <div *ngIf="lname.invalid" class="alert alert-danger">
             <div *ngIf="lname.errors.required">
               Lastname is required.
@@ -61,7 +61,7 @@
         </div>
         <div>
           <label for="email" class="fields">Email</label>
-          <input [(ngModel)]="email" placeholder="email@abc.com" id="emails" name="emails" #emails="ngModel" required class="form-control form-control-lg" />
+          <input [(ngModel)]="email" placeholder="email@abc.com" id="emails" name="emails" #emails="ngModel" class="form-control form-control-lg" #input required/>
 
         </div>
         <div *ngIf="emails.invalid" class="alert alert-danger">
@@ -73,11 +73,13 @@
 
         <p></p>
         <div>
-          <button (click)="update()" class="btn btn-lg btn-primary btn-block">
+          <button (click)="update()" class="btn btn-lg btn-primary btn-block" [disabled]="!form.valid">
             <i class="fa fa-check wbdv-update"></i>&nbsp;Update
           </button>
         </div>
+		</form>
       </div>
+	  
     </div>
   </div>
 <p>
