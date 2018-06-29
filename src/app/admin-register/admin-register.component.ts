@@ -29,7 +29,7 @@ export class AdminRegisterComponent implements OnInit {
         }
         else {
           this.service
-            .createUser(username, password)
+            .createUserByAdmin(username, password)
             .then(() =>
               this.router.navigate(['user-admin']));
         }

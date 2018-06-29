@@ -63,6 +63,21 @@ export class UserServiceClient {
     });
   }
 
+  createUserByAdmin(username, password) {
+    const user = {
+      username: username,
+      password: password
+    };
+    return fetch('http://localhost:4000/api/admin-user', {
+      body: JSON.stringify(user),
+      credentials: 'include', // include, same-origin, *omit
+      method: 'post',
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+  }
+
   findUsername(username) {
 
     const credentials = {
