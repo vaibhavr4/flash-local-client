@@ -7,7 +7,7 @@ We propose an interactive web application for the benefit of the sellers and buy
 
 ### INSTALLATION STEPS
 In command prompt type the following commands,
-1. git clone https://github.com/vaibhavr5/flash-local-client.git
+1. git clone https://github.com/vaibhavr4/flash-local-client.git
 2. npm install (from the folder which contains the repo)
 3. npm start
 
@@ -16,4 +16,4 @@ In command prompt type the following commands,
 2. Preethi Anbunathan - anbunathan.p@husky.neu.edu
 
 
-NODE SERVER (Link to the repo: https://github.com/vaibhavr5/flash-local-server )
+NODE SERVER (Link to the repo: https://github.com/vaibhavr4/flash-local-server )
