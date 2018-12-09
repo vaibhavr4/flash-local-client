@@ -88,6 +88,19 @@
           <p class="description">{{ myAd.username }}</p>
           <p class="description">{{ myAd.email }}</p>
           <p class="description">{{ myAd.phone }}</p>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Message Seller</span>
+              </div>
+              <textarea placeholder="Message to seller" class="form-control form-control-lg" id="description" rows="4" [(ngModel)]="message" aria-label="With textarea" required></textarea>
+            </div>
+
+            <div class="warningText" *ngIf='message === undefined || message.length < 1'> Message Cannot Be Empty</div>
+            <div>
+              <button (click)="postMessage()" class="btn btn-lg btn-dark btn-block" [disabled]="!form.valid">
+                <i class="fa fa-refresh"></i>&nbsp;Send
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -120,7 +133,7 @@
 
       <div>
         <i class="fa fa-map-marker"></i>
-        <p><span>1191 Boylston Street</span> Boston, MA</p>
+        <p><span>891 Huntington Ave</span> Boston, MA</p>
       </div>
 
       <div>

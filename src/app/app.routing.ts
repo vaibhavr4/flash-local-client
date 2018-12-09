@@ -30,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'profile/:userId', component: ProfileComponent},
   {path: 'result', component: ResultSectionComponent},
   { path: 'post-ad', component: PostAdComponent},
+  { path: 'message', component: ViewMyadComponent},
   { path: 'update-ad/:adId', component: UpdateAdComponent },
   { path: 'api/upload', component: FileUploadTestComponent},
   { path:'ad-details', component: AdDetailsComponent},

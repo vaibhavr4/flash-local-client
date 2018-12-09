@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import {UserServiceClient} from "./services/user.service.client";
+import {MessageServiceClient} from "./services/message.service.client";
 import { SearchListComponent } from './search-list/search-list.component';
 import {SearchServiceClient} from "./services/search.service.client";
 import {HttpModule} from "@angular/http";
@@ -34,7 +35,7 @@ import {AdminRegisterComponent} from "./admin-register/admin-register.component"
 import { UpdateAdComponent } from './update-ad/update-ad.component';
 
 
-let config = new AuthServiceConfig([{
+const config = new AuthServiceConfig([{
   id: GoogleLoginProvider.PROVIDER_ID,
   provider: new GoogleLoginProvider("971318108998-1cs6v5m8j1c8cdocf8c4jcu9lu8jbbab.apps.googleusercontent.com")
 }]);
@@ -78,6 +79,7 @@ export function provideConfig() {
     SearchServiceClient,
     SectionServiceClient,
     PostAdServiceClient,
+    MessageServiceClient,
     {
       provide: AuthServiceConfig,
       useFactory: provideConfig
